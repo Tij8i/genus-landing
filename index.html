@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Genus — An open Agent Operating Model</title>
+  <meta name="description" content="Genus is an open, non-technical protocol for describing, deploying, and governing AI agents. It defines three archetypes — Virgil, Stewart, Mason — and the shared substrate they run on.">
+  <meta property="og:title" content="Genus — An open Agent Operating Model">
+  <meta property="og:description" content="Open protocol for non-technical operators to deploy and govern AI agents. Three archetypes: Virgil (personal), Stewart (business), Mason (craft).">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://genus.foundation">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Genus home">
+      <span class="brand-mark" aria-hidden="true">G</span>
+      <span class="brand-text">Genus</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#what">What it is</a>
+      <a href="#archetypes">Archetypes</a>
+      <a href="#spec">Spec</a>
+      <a class="topnav-cta" href="https://github.com/Tij8i/Genus" target="_blank" rel="noopener">GitHub →</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">An open Agent Operating Model</p>
+        <h1>Genus defines the species.</h1>
+        <p class="lede">
+          Genus is an open, non-technical protocol for describing, deploying, and
+          governing AI agents. It sits above the technical runtime — n8n, LangGraph,
+          CrewAI, OpenAI SDK, custom code — and turns business intent into governed
+          agentic execution.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://github.com/Tij8i/Genus" target="_blank" rel="noopener">
+            Read the spec on GitHub
+          </a>
+          <a class="btn btn-ghost" href="#what">What is Genus?</a>
+        </div>
+        <p class="hero-meta">Open source · MIT licensed · Spec v0.2</p>
+      </div>
+    </section>
+
+    <section id="what" class="section">
+      <div class="section-inner">
+        <p class="section-eyebrow">What is Genus</p>
+        <h2>The protocol non-technical operators use to govern AI agents.</h2>
+        <div class="grid two">
+          <div>
+            <p>
+              Genus is not a framework, a runtime, or a vendor stack. It is a
+              <strong>standard</strong> — a shared vocabulary for goals, KPIs,
+              workflows, tasks, constraints, approvals, artifacts, permissions,
+              and memory. Any agent that conforms to the spec plugs into a Genus
+              installation, regardless of the framework it was built with.
+            </p>
+            <p>
+              The protocol gives operators one durable set of controls over their
+              agents: how they get scheduled, how they ask for approval, how they
+              report progress, how they earn or lose trust over time. The
+              underlying runtime is swappable. The operating model is not.
+            </p>
+          </div>
+          <aside class="stack-card" aria-label="Where Genus sits in the stack">
+            <p class="stack-title">The stack</p>
+            <ol class="stack">
+              <li>Business intent — goals, KPIs, workflows, tasks, constraints</li>
+              <li><span class="stack-highlight">Genus — non-technical agent operating layer</span></li>
+              <li>Technical runtime — n8n, LangGraph, CrewAI, OpenAI SDK, custom code</li>
+              <li>Execution — agents, tools, automations, dashboards, artifacts</li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="archetypes" class="section section-alt">
+      <div class="section-inner">
+        <p class="section-eyebrow">Archetypes</p>
+        <h2>Three shapes of agent. Two axes. No fourth box.</h2>
+        <p class="section-lede">
+          Genus discriminates agents on two axes — <em>cadence</em> (continuous vs
+          called) and <em>scope</em> (personal / business / craft). Three shapes
+          fall out. Anything that doesn't fit needs explicit justification, not a
+          new archetype.
+        </p>
+        <div class="grid three archetypes">
+          <article class="archetype">
+            <p class="archetype-tag">Personal · continuous</p>
+            <h3>Virgil</h3>
+            <p>
+              Personal agents. Always-on companions for an individual — PA,
+              fitness coach, mental coach, personal headhunter. Each Virgil
+              carries personal memory and runs on its own heartbeat.
+            </p>
+            <a class="archetype-link" href="https://github.com/Tij8i/Genus/blob/main/VIRGIL.md" target="_blank" rel="noopener">VIRGIL.md →</a>
+          </article>
+          <article class="archetype">
+            <p class="archetype-tag">Business · continuous</p>
+            <h3>Stewart</h3>
+            <p>
+              Business-unit agents. Own a slice of a venture — Marketing,
+              Engineering, a BU — and act on it through a
+              Monitor → Recommend → Execute loop within a calibrated authority
+              envelope.
+            </p>
+            <a class="archetype-link" href="https://github.com/Tij8i/Genus/blob/main/STEWART.md" target="_blank" rel="noopener">STEWART.md →</a>
+          </article>
+          <article class="archetype">
+            <p class="archetype-tag">Craft · per-invocation</p>
+            <h3>Mason</h3>
+            <p>
+              Craft specialists. No heartbeat, no clock of their own — called
+              into a Stewart's flow, produce an artifact, return craft notes, go
+              idle. Reputation builds in a rating log; the registry sorts by it.
+            </p>
+            <a class="archetype-link" href="https://github.com/Tij8i/Genus/blob/main/MASON.md" target="_blank" rel="noopener">MASON.md →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="spec" class="section">
+      <div class="section-inner">
+        <p class="section-eyebrow">Spec</p>
+        <h2>The spec lives on GitHub. Open, MIT-licensed, version-tagged.</h2>
+        <p class="section-lede">
+          Genus is a public, free standard. Read the spec, file issues, propose
+          changes. The reference implementation, archetype docs, and the
+          composability rules between Genus, Virgil, Stewart, and Mason all live
+          in the same repo.
+        </p>
+        <ul class="spec-list">
+          <li>
+            <a href="https://github.com/Tij8i/Genus/blob/main/GENUS_SPEC.md" target="_blank" rel="noopener">
+              <span class="spec-name">GENUS_SPEC.md</span>
+              <span class="spec-desc">The protocol — primitives, substrate, governance.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Tij8i/Genus/blob/main/GENUS_MANIFEST.md" target="_blank" rel="noopener">
+              <span class="spec-name">GENUS_MANIFEST.md</span>
+              <span class="spec-desc">Compatibility manifest agents declare to plug in.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Tij8i/Genus/blob/main/AGENT_FAMILIES.md" target="_blank" rel="noopener">
+              <span class="spec-name">AGENT_FAMILIES.md</span>
+              <span class="spec-desc">Archetype taxonomy + the cadence × scope rule.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Tij8i/Genus" target="_blank" rel="noopener">
+              <span class="spec-name">Tij8i/Genus</span>
+              <span class="spec-desc">Full repository on GitHub.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-brand">
+        <span class="brand-mark small" aria-hidden="true">G</span>
+        Genus — an open Agent Operating Model.
+      </p>
+      <p class="footer-meta">
+        Genus defines the species.
+        <a href="https://sensible-flow.com" target="_blank" rel="noopener">Sensible Flow</a>
+        puts it to work.
+      </p>
+      <p class="footer-links">
+        <a href="https://github.com/Tij8i/Genus" target="_blank" rel="noopener">GitHub</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://github.com/Tij8i/Genus/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
