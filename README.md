@@ -2,8 +2,7 @@
 
 Public landing site for the [Genus](https://github.com/Tij8i/Genus) protocol.
 
-- **Canonical URL:** [https://genus.foundation](https://genus.foundation)
-- **Defensive secondary:** `genus.work` (301 → `genus.foundation`)
+- **Canonical URL:** [https://genus.work](https://genus.work)
 - **Repo:** `Tij8i/genus-landing`
 - **License:** MIT
 
@@ -37,12 +36,9 @@ No build step. Cloudflare Pages serves files directly from the repo root.
 3. **Build settings:** all defaults — framework `None`, build command blank,
    output directory blank (Pages serves from repo root)
 4. Save & deploy — you'll get a `*.pages.dev` URL
-5. **Settings → Custom domains:** add `genus.foundation` (primary) and
-   `genus.work` (secondary)
-6. For `genus.work`, configure a Cloudflare Page Rule:
-   `genus.work/*` → 301 → `https://genus.foundation/$1`
+5. **Settings → Custom domains:** add `genus.work`
 
-DNS is managed automatically when domains are registered via Cloudflare
+DNS is managed automatically when the domain is registered via Cloudflare
 Registrar and bound to the Pages project.
 
 ## Editing
